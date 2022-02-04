@@ -82,6 +82,7 @@ function pullRequestNumber(payload: PullRequestPayload): string {
 function pullRequestModule(payload: PullRequestPayload): string {
   if (
     payload.pull_request === null ||
+    payload.pull_request === undefined ||
     payload.pull_request.labels.length === 0
   ) {
     return ''
