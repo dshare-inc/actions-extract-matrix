@@ -1,11 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'actions-utils'
+description: 'D-SHARE Inc. GA Utils'
+author: 'dshare-inc'
 inputs:
-  milliseconds: # change this
+  type: # change this
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Util type (Extract, Version)'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'

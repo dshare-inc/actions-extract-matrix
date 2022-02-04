@@ -97,3 +97,11 @@ Thumbs.db
 # Ignore built ts files
 __tests__/runner/*
 lib/**/*
+
+# Ignore secrets
+.npmrc
+.yarnrc.yml
+.yarnrc.yaml
+
+# IDE
+.idea
