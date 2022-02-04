@@ -23,7 +23,7 @@ function tagVersion(payload: WebhookPayload): string {
     return ''
   }
   return payload.ref.replace(
-    /refs\/tags\/(?:([A-z0-9-_]+)-|)([0-9]+\.[0-9]+\.[0-9]+)$/,
+    /refs\/tags\/(?:([A-z0-9-_]+)-|)([0-9]+\.[0-9]+\.[0-9]+)(?:|-[A-z]+)$/,
     '$2'
   )
 }
@@ -38,7 +38,7 @@ function tagModule(payload: WebhookPayload): string {
   }
 
   return payload.ref.replace(
-    /refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+$/,
+    /refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+(?:|-[A-z]+)$/,
     '$2'
   )
 }
