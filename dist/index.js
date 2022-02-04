@@ -158,14 +158,14 @@ exports.Actions = {
             core.setOutput('tag_version', (0, extract_1.tag)(github_1.context.payload).version);
             core.setOutput('tag_module', (0, extract_1.tag)(github_1.context.payload).module);
             core.setOutput('tag_suffix', (0, extract_1.tag)(github_1.context.payload).suffix);
-            core.debug(JSON.stringify((0, extract_1.pullRequest)(github_1.context.payload)));
-            core.debug(JSON.stringify((0, extract_1.tag)(github_1.context.payload)));
+            core.info(JSON.stringify((0, extract_1.pullRequest)(github_1.context.payload)));
+            core.info(JSON.stringify((0, extract_1.tag)(github_1.context.payload)));
         }
         catch (e) {
             if (e instanceof Error)
                 core.setFailed(e.message);
             core.setFailed(`🚨 Unknown Error`);
-            core.debug(JSON.stringify(e));
+            core.warning(JSON.stringify(e));
         }
     }
 };
