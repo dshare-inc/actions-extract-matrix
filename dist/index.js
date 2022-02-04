@@ -19,7 +19,9 @@ function tagVersion(payload) {
 function tagModule(payload) {
     if (payload.ref === undefined ||
         payload.ref === null ||
-        payload.ref.match(/refs\/tags\//) === null) {
+        payload.ref.match(/refs\/tags\//) === null ||
+        payload.ref.match(/refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+/) ===
+            null) {
         return '';
     }
     return payload.ref.replace(/refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+(?:|-[A-z]+)$/, '$2');
