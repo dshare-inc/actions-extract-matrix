@@ -39,7 +39,7 @@ function tagModule(payload: WebhookPayload): string {
 
   return payload.ref.replace(
     /refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+$/,
-    '$1'
+    '$2'
   )
 }
 

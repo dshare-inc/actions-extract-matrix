@@ -22,7 +22,7 @@ function tagModule(payload) {
         payload.ref.match(/refs\/tags\//) === null) {
         return '';
     }
-    return payload.ref.replace(/refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+$/, '$1');
+    return payload.ref.replace(/refs\/tags\/([A-z0-9-_]+)-[0-9]+\.[0-9]+\.[0-9]+$/, '$2');
 }
 function tagSuffix(payload) {
     if (payload.ref === undefined ||
